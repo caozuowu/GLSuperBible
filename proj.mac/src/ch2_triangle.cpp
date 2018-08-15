@@ -76,6 +76,10 @@ int main(int argc, char* argv[])
     glutDisplayFunc(RenderScene);
     glutKeyboardFunc(keyBoard);
     
+    GLenum erra= glGetError();
+    printf("%d",erra);
+    
+    
     GLenum err = glewInit();
     if (GLEW_OK != err) {
         fprintf(stderr, "GLEW Error: %s\n", glewGetErrorString(err));
