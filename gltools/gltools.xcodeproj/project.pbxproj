@@ -22,7 +22,6 @@
 		E90D20B92123FFEF009EEB50 /* GLTools.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = GLTools.cpp; sourceTree = "<group>"; };
 		E90D20BA2123FFEF009EEB50 /* GLBatch.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = GLBatch.cpp; sourceTree = "<group>"; };
 		E90D20BB2123FFEF009EEB50 /* GLTriangleBatch.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = GLTriangleBatch.cpp; sourceTree = "<group>"; };
-		E90D20E121240039009EEB50 /* GLUT.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = GLUT.framework; path = System/Library/Frameworks/GLUT.framework; sourceTree = SDKROOT; };
 		E90D20F821240332009EEB50 /* GLBatchBase.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GLBatchBase.h; sourceTree = "<group>"; };
 		E90D20F921240332009EEB50 /* math3d.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = math3d.h; sourceTree = "<group>"; };
 		E90D20FA21240332009EEB50 /* GLTriangleBatch.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GLTriangleBatch.h; sourceTree = "<group>"; };
@@ -72,7 +71,6 @@
 		E90D1AD22123F81E009EEB50 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
-				E90D20E121240039009EEB50 /* GLUT.framework */,
 				E90D1AD52123F869009EEB50 /* OpenGL.framework */,
 				E90D1AD32123F81E009EEB50 /* libGLEW.a */,
 			);

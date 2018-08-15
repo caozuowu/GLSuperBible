@@ -1,8 +1,8 @@
 // Triangle.cpp
 // Our first OpenGL program that will just draw a triangle on the screen.
 
-#include "GLTools.h"
-#include "GLShaderManager.h"
+#include <GLTools.h>
+#include <GLShaderManager.h>
 
 #ifdef __APPLE__
 #include <GLUT/glut.h>
