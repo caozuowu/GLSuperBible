@@ -37,7 +37,6 @@ void SetupRC()
         -0.9f, -0.95f, 0.0f,
         0.95f, 0.9f, 0.0f
     };
-    
     triangleBatch.Begin(GL_TRIANGLES, 6);
     triangleBatch.CopyVertexData3f(vVerts);
     triangleBatch.End();
@@ -71,6 +70,7 @@ int main(int argc, char* argv[])
     glutInit(&argc, argv);
     glutInitDisplayMode(GLUT_DOUBLE | GLUT_RGBA | GLUT_DEPTH | GLUT_STENCIL);
     glutInitWindowSize(600, 600);
+    glutInitWindowPosition(100, 100);
     glutCreateWindow(argv[0]);
     glutReshapeFunc(ChangeSize);
     glutDisplayFunc(RenderScene);

@@ -7,15 +7,15 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		E90D1A472123CFB4009EEB50 /* GLUT.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E948D539211ACB6A00F5F1C5 /* GLUT.framework */; };
+		E90D1A482123CFC6009EEB50 /* libGLEW.a in Frameworks */ = {isa = PBXBuildFile; fileRef = E948D535211AC9C200F5F1C5 /* libGLEW.a */; };
 		E91CAD16211D45720080F395 /* math3d.cpp in Sources */ = {isa = PBXBuildFile; fileRef = E91CAD10211D45720080F395 /* math3d.cpp */; };
 		E91CAD18211D45720080F395 /* GLShaderManager.cpp in Sources */ = {isa = PBXBuildFile; fileRef = E91CAD12211D45720080F395 /* GLShaderManager.cpp */; };
 		E91CAD19211D45720080F395 /* GLTools.cpp in Sources */ = {isa = PBXBuildFile; fileRef = E91CAD13211D45720080F395 /* GLTools.cpp */; };
 		E91CAD1A211D45720080F395 /* GLBatch.cpp in Sources */ = {isa = PBXBuildFile; fileRef = E91CAD14211D45720080F395 /* GLBatch.cpp */; };
 		E91CAD1B211D45720080F395 /* GLTriangleBatch.cpp in Sources */ = {isa = PBXBuildFile; fileRef = E91CAD15211D45720080F395 /* GLTriangleBatch.cpp */; };
-		E91CAD1C211D4D760080F395 /* libGLEW.a in Frameworks */ = {isa = PBXBuildFile; fileRef = E948D535211AC9C200F5F1C5 /* libGLEW.a */; };
-		E948D4DA211AB80800F5F1C5 /* main.cpp in Sources */ = {isa = PBXBuildFile; fileRef = E948D4D9211AB80800F5F1C5 /* main.cpp */; };
+		E948D4DA211AB80800F5F1C5 /* ch1_triangle.cpp in Sources */ = {isa = PBXBuildFile; fileRef = E948D4D9211AB80800F5F1C5 /* ch1_triangle.cpp */; };
 		E948D538211ACA9B00F5F1C5 /* OpenGL.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E948D537211ACA9B00F5F1C5 /* OpenGL.framework */; };
-		E948D53A211ACB6B00F5F1C5 /* GLUT.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E948D539211ACB6A00F5F1C5 /* GLUT.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -31,6 +31,7 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		E90D1A6A2123D315009EEB50 /* md */ = {isa = PBXFileReference; lastKnownFileType = folder; name = md; path = ../md; sourceTree = "<group>"; };
 		E91CAD04211D45720080F395 /* GLBatchBase.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GLBatchBase.h; sourceTree = "<group>"; };
 		E91CAD05211D45720080F395 /* math3d.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = math3d.h; sourceTree = "<group>"; };
 		E91CAD06211D45720080F395 /* GLTriangleBatch.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GLTriangleBatch.h; sourceTree = "<group>"; };
@@ -47,8 +48,8 @@
 		E91CAD13211D45720080F395 /* GLTools.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = GLTools.cpp; sourceTree = "<group>"; };
 		E91CAD14211D45720080F395 /* GLBatch.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = GLBatch.cpp; sourceTree = "<group>"; };
 		E91CAD15211D45720080F395 /* GLTriangleBatch.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = GLTriangleBatch.cpp; sourceTree = "<group>"; };
-		E948D4D6211AB80800F5F1C5 /* test */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = test; sourceTree = BUILT_PRODUCTS_DIR; };
-		E948D4D9211AB80800F5F1C5 /* main.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = main.cpp; sourceTree = "<group>"; };
+		E948D4D6211AB80800F5F1C5 /* ch1_triangle */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = ch1_triangle; sourceTree = BUILT_PRODUCTS_DIR; };
+		E948D4D9211AB80800F5F1C5 /* ch1_triangle.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = ch1_triangle.cpp; sourceTree = "<group>"; };
 		E948D535211AC9C200F5F1C5 /* libGLEW.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libGLEW.a; path = ../glew/libGLEW.a; sourceTree = "<group>"; };
 		E948D537211ACA9B00F5F1C5 /* OpenGL.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = OpenGL.framework; path = System/Library/Frameworks/OpenGL.framework; sourceTree = SDKROOT; };
 		E948D539211ACB6A00F5F1C5 /* GLUT.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = GLUT.framework; path = System/Library/Frameworks/GLUT.framework; sourceTree = SDKROOT; };
@@ -59,8 +60,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				E91CAD1C211D4D760080F395 /* libGLEW.a in Frameworks */,
-				E948D53A211ACB6B00F5F1C5 /* GLUT.framework in Frameworks */,
+				E90D1A482123CFC6009EEB50 /* libGLEW.a in Frameworks */,
+				E90D1A472123CFB4009EEB50 /* GLUT.framework in Frameworks */,
 				E948D538211ACA9B00F5F1C5 /* OpenGL.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -111,8 +112,9 @@
 		E948D4CB211AB7D500F5F1C5 = {
 			isa = PBXGroup;
 			children = (
+				E90D1A6A2123D315009EEB50 /* md */,
 				E91CAD02211D45720080F395 /* gltools */,
-				E948D4D8211AB80800F5F1C5 /* test */,
+				E948D4D8211AB80800F5F1C5 /* src */,
 				E948D4D7211AB80800F5F1C5 /* Products */,
 				E948D534211AC9C200F5F1C5 /* Frameworks */,
 			);
@@ -121,17 +123,17 @@
 		E948D4D7211AB80800F5F1C5 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				E948D4D6211AB80800F5F1C5 /* test */,
+				E948D4D6211AB80800F5F1C5 /* ch1_triangle */,
 			);
 			name = Products;
 			sourceTree = "<group>";
 		};
-		E948D4D8211AB80800F5F1C5 /* test */ = {
+		E948D4D8211AB80800F5F1C5 /* src */ = {
 			isa = PBXGroup;
 			children = (
-				E948D4D9211AB80800F5F1C5 /* main.cpp */,
+				E948D4D9211AB80800F5F1C5 /* ch1_triangle.cpp */,
 			);
-			path = test;
+			path = src;
 			sourceTree = "<group>";
 		};
 		E948D534211AC9C200F5F1C5 /* Frameworks */ = {
@@ -147,9 +149,9 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		E948D4D5211AB80800F5F1C5 /* test */ = {
+		E948D4D5211AB80800F5F1C5 /* ch1_triangle */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = E948D4DD211AB80800F5F1C5 /* Build configuration list for PBXNativeTarget "test" */;
+			buildConfigurationList = E948D4DD211AB80800F5F1C5 /* Build configuration list for PBXNativeTarget "ch1_triangle" */;
 			buildPhases = (
 				E948D4D2211AB80800F5F1C5 /* Sources */,
 				E948D4D3211AB80800F5F1C5 /* Frameworks */,
@@ -159,9 +161,9 @@
 			);
 			dependencies = (
 			);
-			name = test;
+			name = ch1_triangle;
 			productName = test;
-			productReference = E948D4D6211AB80800F5F1C5 /* test */;
+			productReference = E948D4D6211AB80800F5F1C5 /* ch1_triangle */;
 			productType = "com.apple.product-type.tool";
 		};
 /* End PBXNativeTarget section */
@@ -189,7 +191,7 @@
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				E948D4D5211AB80800F5F1C5 /* test */,
+				E948D4D5211AB80800F5F1C5 /* ch1_triangle */,
 			);
 		};
 /* End PBXProject section */
@@ -202,7 +204,7 @@
 				E91CAD1B211D45720080F395 /* GLTriangleBatch.cpp in Sources */,
 				E91CAD16211D45720080F395 /* math3d.cpp in Sources */,
 				E91CAD18211D45720080F395 /* GLShaderManager.cpp in Sources */,
-				E948D4DA211AB80800F5F1C5 /* main.cpp in Sources */,
+				E948D4DA211AB80800F5F1C5 /* ch1_triangle.cpp in Sources */,
 				E91CAD1A211D45720080F395 /* GLBatch.cpp in Sources */,
 				E91CAD19211D45720080F395 /* GLTools.cpp in Sources */,
 			);
@@ -214,16 +216,16 @@
 		E948D4D0211AB7D500F5F1C5 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				HEADER_SEARCH_PATHS = /Users/zuowu/Desktop/GAME/GLSuperBible/glew/;
-				LIBRARY_SEARCH_PATHS = /Users/zuowu/Desktop/GAME/GLSuperBible/glew;
+				HEADER_SEARCH_PATHS = "$(SRCROOT)/../glew/";
+				LIBRARY_SEARCH_PATHS = "$(SRCROOT)/../glew/";
 			};
 			name = Debug;
 		};
 		E948D4D1211AB7D500F5F1C5 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				HEADER_SEARCH_PATHS = /Users/zuowu/Desktop/GAME/GLSuperBible/glew/;
-				LIBRARY_SEARCH_PATHS = /Users/zuowu/Desktop/GAME/GLSuperBible/glew;
+				HEADER_SEARCH_PATHS = "$(SRCROOT)/../glew/";
+				LIBRARY_SEARCH_PATHS = "$(SRCROOT)/../glew/";
 			};
 			name = Release;
 		};
@@ -358,7 +360,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		E948D4DD211AB80800F5F1C5 /* Build configuration list for PBXNativeTarget "test" */ = {
+		E948D4DD211AB80800F5F1C5 /* Build configuration list for PBXNativeTarget "ch1_triangle" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				E948D4DB211AB80800F5F1C5 /* Debug */,
