@@ -5,7 +5,8 @@
 #include "GLShaderManager.h"
 
 #ifdef __APPLE__
-#include <glut/glut.h>          // OS X version of GLUT
+#include <GLUT/glut.h>
+
 #else
 #define FREEGLUT_STATIC
 #include <GL/glut.h>            // Windows FreeGlut equivalent
@@ -25,13 +26,19 @@ void ChangeSize(int w, int h)
 void SetupRC()
 {
     // Blue background
-    glClearColor(0.0f, 0.0f, 1.0f, 1.0f );
+    glClearColor(0.0f, 0.0f, 0.0f, 1.0f );
     shaderManager.InitializeStockShaders();
-    GLfloat vVerts[] = { -0.5f, 0.0f, 0.0f,
-        0.5f, 0.0f, 0.0f,
-        0.0f, 0.5f, 0.0f };
+    GLfloat vVerts[] = {
+        -0.95f, 0.95f, 0.0f,
+        0.9f, 0.95f, 0.0f,
+        -0.95f, -0.9f, 0.0f,
+        
+        0.95f, -0.95f, 0.0f,
+        -0.9f, -0.95f, 0.0f,
+        0.95f, 0.9f, 0.0f
+    };
     
-    triangleBatch.Begin(GL_TRIANGLES, 3);
+    triangleBatch.Begin(GL_TRIANGLES, 6);
     triangleBatch.CopyVertexData3f(vVerts);
     triangleBatch.End();
 }
@@ -44,7 +51,7 @@ void RenderScene(void)
     // Clear the window with current clearing color
     glClear(GL_COLOR_BUFFER_BIT | GL_DEPTH_BUFFER_BIT | GL_STENCIL_BUFFER_BIT);
     
-    GLfloat vRed[] = { 1.0f, 0.0f, 0.0f, 1.0f };
+    GLfloat vRed[] = { 1.0f, 1.0f, 1.0f, 1.0f };
     shaderManager.UseStockShader(GLT_SHADER_IDENTITY, vRed);
     triangleBatch.Draw();
     glutSwapBuffers();
@@ -63,8 +70,8 @@ int main(int argc, char* argv[])
     
     glutInit(&argc, argv);
     glutInitDisplayMode(GLUT_DOUBLE | GLUT_RGBA | GLUT_DEPTH | GLUT_STENCIL);
-    glutInitWindowSize(800, 600);
-    glutCreateWindow("Triangle");
+    glutInitWindowSize(600, 600);
+    glutCreateWindow(argv[0]);
     glutReshapeFunc(ChangeSize);
     glutDisplayFunc(RenderScene);
     glutKeyboardFunc(keyBoard);
