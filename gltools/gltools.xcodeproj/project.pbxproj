@@ -32,11 +32,9 @@
 		E90D20FF21240332009EEB50 /* GLGeometryTransform.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GLGeometryTransform.h; sourceTree = "<group>"; };
 		E90D210021240332009EEB50 /* GLShaderManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GLShaderManager.h; sourceTree = "<group>"; };
 		E90D210121240332009EEB50 /* StopWatch.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = StopWatch.h; sourceTree = "<group>"; };
-		E90D210321240332009EEB50 /* glxew.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = glxew.h; sourceTree = "<group>"; };
-		E90D210421240332009EEB50 /* wglew.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = wglew.h; sourceTree = "<group>"; };
-		E90D210521240332009EEB50 /* glew.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = glew.h; sourceTree = "<group>"; };
 		E90D210621240332009EEB50 /* GLTools.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GLTools.h; sourceTree = "<group>"; };
 		E90D213D212405E2009EEB50 /* libgltools.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libgltools.a; sourceTree = BUILT_PRODUCTS_DIR; };
+		E90D2175212429FC009EEB50 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -55,6 +53,7 @@
 			children = (
 				E90D20F721240332009EEB50 /* include */,
 				E90D20B52123FFEF009EEB50 /* src */,
+				E90D2173212429FC009EEB50 /* gltoolsf */,
 				E90D1A8A2123F48F009EEB50 /* Products */,
 				E90D1AD22123F81E009EEB50 /* Frameworks */,
 			);
@@ -102,20 +101,17 @@
 				E90D20FF21240332009EEB50 /* GLGeometryTransform.h */,
 				E90D210021240332009EEB50 /* GLShaderManager.h */,
 				E90D210121240332009EEB50 /* StopWatch.h */,
-				E90D210221240332009EEB50 /* GL */,
 				E90D210621240332009EEB50 /* GLTools.h */,
 			);
 			path = include;
 			sourceTree = "<group>";
 		};
-		E90D210221240332009EEB50 /* GL */ = {
+		E90D2173212429FC009EEB50 /* gltoolsf */ = {
 			isa = PBXGroup;
 			children = (
-				E90D210321240332009EEB50 /* glxew.h */,
-				E90D210421240332009EEB50 /* wglew.h */,
-				E90D210521240332009EEB50 /* glew.h */,
+				E90D2175212429FC009EEB50 /* Info.plist */,
 			);
-			path = GL;
+			path = gltoolsf;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -315,7 +311,10 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = JC2EQSWR8C;
 				EXECUTABLE_PREFIX = lib;
-				HEADER_SEARCH_PATHS = "$(SRCROOT)/include";
+				HEADER_SEARCH_PATHS = (
+					"$(SRCROOT)/include",
+					"$(SRCROOT)/../glew",
+				);
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SKIP_INSTALL = YES;
 			};
@@ -328,7 +327,10 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = JC2EQSWR8C;
 				EXECUTABLE_PREFIX = lib;
-				HEADER_SEARCH_PATHS = "$(SRCROOT)/include";
+				HEADER_SEARCH_PATHS = (
+					"$(SRCROOT)/include",
+					"$(SRCROOT)/../glew",
+				);
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SKIP_INSTALL = YES;
 			};
